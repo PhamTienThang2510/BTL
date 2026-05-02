@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Allow cleartext (HTTP) traffic for development ONLY -->
+    <!-- DO NOT use in production -->
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- Android Emulator: 10.0.2.2 maps to host machine localhost -->
+        <domain includeSubdomains="true">10.0.2.2</domain>
+
+        <!-- Local development machine -->
+        <domain includeSubdomains="true">localhost</domain>
+
+        <!-- LAN IP for testing on physical devices on same Wi-Fi -->
+        <domain includeSubdomains="true">192.168.1.100</domain>
+        <domain includeSubdomains="true">192.168.0.0</domain>
+    </domain-config>
+
+    <!-- Production configuration (HTTPS only with Certificate Pinning) -->
+    <!-- Note: Update with your actual production domain and certificates -->
+    <!-- expiration date MUST be in future (current date: 2026-03-20) -->
+    <!-- Requires 2+ pins for backup -->
+    <!--
+    <domain-config>
+        <domain includeSubdomains="true">api.yourdomain.com</domain>
+        <pin-set expiration="2027-12-31">
+            <pin digest="SHA-256">primary-pin-hash</pin>
+            <pin digest="SHA-256">backup-pin-hash</pin>
+        </pin-set>
+    </domain-config>
+    -->
+</network-security-config>
+

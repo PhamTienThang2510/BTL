@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Button dimensions -->
+    <dimen name="buttonCorners">8dp</dimen>
+    <dimen name="mediumButtonHeight">48dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="h4TextSize">35sp</dimen>
+    <dimen name="h2TextSize">17sp</dimen>
+    <dimen name="h3TextSize">22sp</dimen>
+
+    <!-- Home Fragment UI dimensions -->
+    <dimen name="_4sdp">4dp</dimen>
+    <dimen name="_5sdp">5dp</dimen>
+    <dimen name="_8sdp">8dp</dimen>
+    <dimen name="_9ssp">9sp</dimen>
+    <dimen name="_10sdp">10dp</dimen>
+    <dimen name="_11sdp">11dp</dimen>
+    <dimen name="_12sdp">12dp</dimen>
+    <dimen name="_12ssp">12sp</dimen>
+    <dimen name="_14ssp">14sp</dimen>
+    <dimen name="_15sdp">15dp</dimen>
+    <dimen name="_16sdp">16dp</dimen>
+    <dimen name="_20sdp">20dp</dimen>
+    <dimen name="_28sdp">28dp</dimen>
+    <dimen name="_64sdp">64dp</dimen>
+    <dimen name="_80sdp">80dp</dimen>
+    <dimen name="_83sdp">83dp</dimen>
+    <dimen name="_88sdp">88dp</dimen>
+    <dimen name="_90sdp">90dp</dimen>
+    <dimen name="_100sdp">100dp</dimen>
+    <dimen name="_120sdp">120dp</dimen>
+    <dimen name="_130sdp">130dp</dimen>
+    <dimen name="_150sdp">150dp</dimen>
+    <dimen name="_10ssp">10sp</dimen>
+</resources>
+

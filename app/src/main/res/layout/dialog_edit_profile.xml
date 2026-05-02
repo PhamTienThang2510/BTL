@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/username"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="8dp"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:inputType="text"
+        android:hint="@string/enter_username"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="@drawable/search_box_background"
+        android:layout_marginBottom="16dp"
+        android:textSize="14sp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/phone"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="8dp"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:inputType="phone"
+        android:hint="@string/enter_phone"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="@drawable/search_box_background"
+        android:textSize="14sp"
+        android:textColor="@color/black" />
+
+</LinearLayout>
+

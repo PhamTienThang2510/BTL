@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Home Tab - Must match navigation_home in shopping_graph.xml -->
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
+
+    <!-- Shop/Browse Tab - Must match navigation_shop in shopping_graph.xml -->
+    <item
+        android:id="@+id/navigation_shop"
+        android:icon="@drawable/ic_shop"
+        android:title="@string/shop" />
+
+    <!-- Cart Tab - Must match navigation_cart in shopping_graph.xml -->
+    <item
+        android:id="@+id/navigation_cart"
+        android:icon="@drawable/shopping_cart"
+        android:title="@string/cart" />
+
+    <!-- Profile Tab - Must match navigation_profile in shopping_graph.xml -->
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_user"
+        android:title="@string/profile" />
+
+</menu>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <!-- Search Box (hidden when showing single category) -->
+    <TextView
+        android:id="@+id/tv_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_box_background"
+        android:fontFamily="@font/poppins_thin"
+        android:hint="@string/g_search_now"
+        android:paddingStart="@dimen/_12sdp"
+        android:singleLine="true"
+        android:textColor="@color/g_icon_tint"
+        android:textSize="@dimen/_12ssp"
+        android:gravity="center_vertical"
+        android:drawableEnd="@drawable/ic_search"
+        android:padding="10dp"
+        android:drawablePadding="10dp"
+        android:minHeight="45dp"
+        app:layout_constraintBottom_toTopOf="@id/tabLayout"
+        app:layout_constraintEnd_toStartOf="@id/frame_microphone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Microphone Button (hidden when showing single category) -->
+    <FrameLayout
+        android:id="@+id/frame_microphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:background="@drawable/favorite_background"
+        android:backgroundTint="@color/g_search_and_icons"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_search"
+        app:layout_constraintTop_toTopOf="@id/tv_search">
+
+        <ImageView
+            android:id="@+id/img_mic"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_microphone" />
+    </FrameLayout>
+
+    <!-- Category Tabs (hidden when showing single category) -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_search"
+        app:tabIndicatorHeight="4dp"
+        app:tabIndicatorColor="@color/g_blue"
+        app:tabIndicatorFullWidth="false"
+        app:tabMode="scrollable"
+        app:tabRippleColor="@color/g_blue100"
+        app:tabSelectedTextColor="@color/g_blue"
+        app:tabTextColor="@color/g_gray500"
+        app:tabTextAppearance="@style/tabLayout_text"
+        app:tabPaddingStart="@dimen/_8sdp"
+        app:tabPaddingEnd="@dimen/_8sdp" />
+
+    <!-- Products ViewPager (hidden when showing single category) -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpagerCategoryProducts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Products RecyclerView (shown when displaying single category) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProducts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

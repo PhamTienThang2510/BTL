@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shopping_graph"
+    app:startDestination="@id/navigation_home">
+
+    <!-- HOME FRAGMENT -->
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.btl.Fragments.Shopping.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_detail_product"
+            app:destination="@id/detailProductFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_down" />
+        <action
+            android:id="@+id/action_home_to_search"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_down" />
+    </fragment>
+
+    <!-- SHOP FRAGMENT -->
+    <fragment
+        android:id="@+id/navigation_shop"
+        android:name="com.example.btl.Fragments.Shopping.CategoryProductsFragment"
+        android:label="@string/shop"
+        tools:layout="@layout/fragment_category_products">
+        <action
+            android:id="@+id/action_shop_to_detail_product"
+            app:destination="@id/detailProductFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_down" />
+        <action
+            android:id="@+id/action_to_productMockupFragment"
+            app:destination="@id/mockupTemplateSelectionFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_down" />
+        <action
+            android:id="@+id/action_shop_to_search"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_down" />
+    </fragment>
+
+    <!-- SEARCH FRAGMENT -->
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.btl.Fragments.Shopping.SearchFragment"
+        android:label="@string/search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_search_to_detail_product"
+            app:destination="@id/detailProductFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_down" />
+    </fragment>
+
+    <!-- CART FRAGMENT -->
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="com.example.btl.Fragments.Shopping.CartFragment"
+        android:label="@string/cart"
+        tools:layout="@layout/fragment_cart">
+        <action
+            android:id="@+id/action_navigation_cart_to_billingFragment"
+            app:destination="@id/billingFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_down" />
+    </fragment>
+
+    <!-- PROFILE FRAGMENT -->
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.btl.Fragments.Shopping.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_to_userAccountFragment"
+            app:destination="@id/userAccountFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_down" />
+        <action
+            android:id="@+id/action_profileFragment_to_ordersListFragment"
+            app:destination="@id/ordersListFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_down" />
+    </fragment>
+
+    <!-- USER ACCOUNT FRAGMENT -->
+    <fragment
+        android:id="@+id/userAccountFragment"
+        android:name="com.example.btl.Fragments.Shopping.UserAccountFragment"
+        android:label="@string/my_account"
+        tools:layout="@layout/fragment_user_account" />
+
+
+    <!-- DETAIL PRODUCT FRAGMENT -->
+    <fragment
+        android:id="@+id/detailProductFragment"
+        android:name="com.example.btl.Fragments.Shopping.DetailProductFragment"
+        android:label="@string/product_detail"
+        tools:layout="@layout/fragment_detail_product" />
+
+    <!-- BILLING FRAGMENT -->
+    <fragment
+        android:id="@+id/billingFragment"
+        android:name="com.example.btl.Fragments.Shopping.BillingFragment"
+        android:label="Billing"
+        tools:layout="@layout/fragment_billing">
+        <action
+            android:id="@+id/action_billingFragment_to_addressFragment"
+            app:destination="@id/addressFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_down" />
+        <action
+            android:id="@+id/action_billingFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_down" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="com.example.btl.Fragments.Shopping.AddressFragment"
+        android:label="Address"
+        tools:layout="@layout/fragment_address" />
+
+    <!-- PAYMENT FRAGMENT -->
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.example.btl.Fragments.Shopping.PaymentFragment"
+        android:label="@string/payment_method"
+        tools:layout="@layout/fragment_payment">
+        <argument
+            android:name="order_id"
+            app:argType="integer" />
+        <argument
+            android:name="payment_method"
+            app:argType="string"
+            android:defaultValue="cash" />
+        <action
+            android:id="@+id/action_paymentFragment_to_orderDetailFragment"
+            app:destination="@id/orderDetailFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_down" />
+    </fragment>
+
+    <!-- MOCKUP TEMPLATE SELECTION FRAGMENT -->
+    <fragment
+        android:id="@+id/mockupTemplateSelectionFragment"
+        android:name="com.example.btl.Fragments.Shopping.MockupTemplateSelectionFragment"
+        android:label="@string/mockup_templates"
+        tools:layout="@layout/fragment_mockup_template_selection">
+        <action
+            android:id="@+id/action_mockupTemplateSelection_to_productMockup"
+            app:destination="@id/productMockupFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_down" />
+    </fragment>
+
+    <!-- PRODUCT MOCKUP FRAGMENT -->
+    <fragment
+        android:id="@+id/productMockupFragment"
+        android:name="com.example.btl.Fragments.Shopping.ProductMockupFragment"
+        android:label="@string/design_product"
+        tools:layout="@layout/fragment_product_mockup" />
+
+    <!-- ORDERS LIST FRAGMENT -->
+    <fragment
+        android:id="@+id/ordersListFragment"
+        android:name="com.example.btl.Fragments.Shopping.OrdersListFragment"
+        android:label="@string/all_orders"
+        tools:layout="@layout/fragment_orders_list">
+        <action
+            android:id="@+id/action_ordersListFragment_to_orderDetailFragment"
+            app:destination="@id/orderDetailFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_down" />
+    </fragment>
+
+    <!-- ORDER DETAIL FRAGMENT -->
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="com.example.btl.Fragments.Shopping.OrderDetailFragment"
+        android:label="@string/order_information"
+        tools:layout="@layout/fragment_order_detail">
+        <argument
+            android:name="order_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_orderDetailFragment_to_reviewFragment"
+            app:destination="@id/reviewFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_down" />
+        <action
+            android:id="@+id/action_orderDetailFragment_to_refundFragment"
+            app:destination="@id/refundFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_down" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/refundFragment"
+        android:name="com.example.btl.Fragments.Shopping.RefundFragment"
+        android:label="Hoàn hàng"
+        tools:layout="@layout/fragment_refund">
+        <argument
+            android:name="order_id"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reviewFragment"
+        android:name="com.example.btl.Fragments.Shopping.ReviewFragment"
+        android:label="@string/review"
+        tools:layout="@layout/fragment_review">
+        <argument
+            android:name="product_id"
+            app:argType="integer" />
+        <argument
+            android:name="product_name"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+
+</navigation>
